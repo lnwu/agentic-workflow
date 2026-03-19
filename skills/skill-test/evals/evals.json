@@ -1,0 +1,11 @@
+{
+  "skill_name": "skill-test",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "test skill skill-test",
+      "expected_output": "skill skill-test is tested successfully",
+      "assertions": ["the skill-test is invoked successfully"]
+    }
+  ]
+}
