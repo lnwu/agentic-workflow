@@ -27,7 +27,7 @@ Execute this task:
 - Task: <eval prompt>
 - Input files: <eval files if any, or "none">
 - Save outputs to: <workspace>/iteration-<N>/eval-<ID>/with_skill/outputs/
-- Outputs to save: <what the user cares about — e.g., "the .docx file", "the final CSV">
+- Outputs to save: <what the user cares about — e.g., "the .docx file", "the final CSV">.
 ```
 
 **Without-skill** (same prompt, but no skill):
@@ -36,6 +36,6 @@ No skill at all. Same prompt, no skill path, save to `without_skill/outputs/`.
 
 ## Step 2: Write summaries
 
-After the runs finish, write a `summary.md` for each run (with and without skill) and show **Eval Results** and **Eval Detail Results** section to the user.
+After the runs finish, write a single iteration-level `summary.md` at `<workspace>/iteration-<N>/summary.md` and show **Eval Results** and **Eval Detail Results** section to the user.
 
 See [summary.md schema](references/summary.schema.md) for details.
