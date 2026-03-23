@@ -12,7 +12,11 @@ Defines the evals for a skill. Located at `evals/evals.json` within the skill di
       "id": 1,
       "prompt": "User's example prompt",
       "files": ["evals/files/sample1.pdf"],
-      "expectations": ["The output includes X", "The skill used script Y"]
+      "expectations": [
+        { "step": "skill-invoke", "description": "This skill was invoked" },
+        { "step": "output", "description": "The output includes X" },
+        { "step": "script", "description": "The skill used script Y" }
+      ]
     }
   ]
 }
@@ -24,4 +28,6 @@ Defines the evals for a skill. Located at `evals/evals.json` within the skill di
 - `evals[].id`: Unique integer identifier
 - `evals[].prompt`: The task to execute
 - `evals[].files`: Optional list of input file paths (relative to skill root)
-- `evals[].expectations`: List of verifiable statements
+- `evals[].expectations`: List of verifiable statements, each with:
+  - `step`: The point in the process this expectation applies to (e.g., "skill-invoke", "output", "script")
+  - `description`: A clear statement of what should be true at this step for the expectation to be met

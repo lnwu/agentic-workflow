@@ -17,7 +17,7 @@ Put results in skills-test-results/<skill-name>-workspace/ as a sibling to the s
 
 ## Step 1: Spawn all runs (with-skill AND without-skill) in the same turn
 
-For each test case, spawn two **subagents** in the same turn — one with the skill, one without. This is important: don't spawn the with-skill runs first and then come back for baselines later. Launch everything at once so it all finishes around the same time.
+For each test case, spawn two **subagents** in the same turn — one with the skill, one without. This is important: don't spawn the with-skill runs first and then come back for without-skill later. Launch everything at once so it all finishes around the same time.
 
 **With-skill run:**
 
@@ -34,4 +34,8 @@ Execute this task:
 
 No skill at all. Same prompt, no skill path, save to `without_skill/outputs/`.
 
-The outputs should have at least a `summary.md` for the main output. If there are files to save, include those as well.
+## Step 2: Write summaries
+
+After the runs finish, write a `summary.md` for each run (with and without skill) and show **Eval Results** and **Eval Detail Results** section to the user.
+
+See [summary.md schema](references/summary.schema.md) for details.

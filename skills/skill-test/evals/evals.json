@@ -4,7 +4,16 @@
     {
       "id": 1,
       "prompt": "test skill skill-test",
-      "expectations": ["the skill-test is invoked successfully"]
+      "expectations": [
+        {
+          "step": "skill-invoke",
+          "description": "The skill-test was invoked"
+        },
+        {
+          "step": "output",
+          "description": "The output should have summary.md for iteration X"
+        }
+      ]
     }
   ]
 }
