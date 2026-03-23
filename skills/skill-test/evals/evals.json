@@ -10,8 +10,8 @@
           "description": "The skill-test was invoked"
         },
         {
-          "step": "output",
-          "description": "The output should have summary.md for iteration X"
+          "step": "iteration-result",
+          "description": "The iteration X folder should have summary.md, but the with-skill/without-skill folder should not have a summary.md"
         }
       ]
     }
